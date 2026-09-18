@@ -134,8 +134,7 @@ def log_protocol_run(members: list[dict], tracking_uri: str | None = None) -> st
 
 
 if __name__ == "__main__":
-    # NO EJECUTAR AÚN: faltan member_id/ARN del resto del equipo. Este run
-    # solo se corre una vez para TODOS los integrantes (no se puede repetir).
+    # Equipo completo (3 integrantes). Este run se ejecuta UNA sola vez.
     members = [
         {
             "member_id": "1019982682",
@@ -145,7 +144,9 @@ if __name__ == "__main__":
             "member_id": "1010126599",
             "notebook_arn": "arn:aws:sagemaker:us-east-1:146249747419:notebook-instance/T2PLN",
         },
-        # TODO: agregar aquí member_id/notebook_arn del integrante 3
-        # antes de correr `python -m src.protocol` en serio.
+        {
+            "member_id": "1065124558",
+            "notebook_arn": "arn:aws:sagemaker:us-east-1:219006642458:notebook-instance/Laboratorio2",
+        },
     ]
     log_protocol_run(members, tracking_uri=os.environ.get("MLFLOW_TRACKING_URI"))
