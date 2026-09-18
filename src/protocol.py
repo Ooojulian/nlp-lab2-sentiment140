@@ -138,10 +138,14 @@ if __name__ == "__main__":
     # solo se corre una vez para TODOS los integrantes (no se puede repetir).
     members = [
         {
-            "member_id": "julian",
+            "member_id": "1019982682",
             "notebook_arn": "arn:aws:sagemaker:us-west-2:025118392450:notebook-instance/nlp-lab2-sentiment140-julian",
         },
-        # TODO: agregar aquí member_id/notebook_arn de cada compañero de equipo
+        {
+            "member_id": "1010126599",
+            "notebook_arn": "arn:aws:sagemaker:us-east-1:146249747419:notebook-instance/T2PLN",
+        },
+        # TODO: agregar aquí member_id/notebook_arn del integrante 3
         # antes de correr `python -m src.protocol` en serio.
     ]
     log_protocol_run(members, tracking_uri=os.environ.get("MLFLOW_TRACKING_URI"))
